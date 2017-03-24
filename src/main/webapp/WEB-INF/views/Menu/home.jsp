@@ -14,23 +14,20 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 </head>
 <body>
-
-	<center>
-		<h1>Shopping Cart</h1>
-	</center>
 	<center>${msg}</center>
 	<center>${successMessage}</center>
 	<center>${errorMessage}</center>
 	${loginMessage}<br>
-	<hr>
+	
+	<jsp:include page="Header.jsp"></jsp:include>
 
 	<c:if test="${empty loginMessage}">
-		<a href="login">Login</a>&nbsp;&nbsp;&nbsp;
-		<a href="register"> Register</a>&nbsp;&nbsp;&nbsp;
+		<a href="login"></a>&nbsp;&nbsp;&nbsp;
+		<a href="register"></a>&nbsp;&nbsp;&nbsp;
 	</c:if>
 	
-	<a href="contact"> Contact</a>&nbsp;&nbsp;&nbsp;
-	<a href="aboutUs"> About</a>&nbsp;&nbsp;&nbsp;
+	<a href="contact"></a>&nbsp;&nbsp;&nbsp;
+	<a href="aboutUs"></a>&nbsp;&nbsp;&nbsp;
 
 	<c:if test="${not empty loginMessage}">
 		<a href="logout">Logout</a><br>&nbsp;&nbsp;&nbsp;
@@ -63,6 +60,12 @@
 	<c:if test="${isUserClickedContact==true}">
 		<jsp:include page="/WEB-INF/views/Menu/contact.jsp"></jsp:include>
 	</c:if>
+
+    <c:if test="${isUserClickedMyCart==true }">
+         <jsp:include page="/WEB-INF/views/Menu/myCart.jsp"></jsp:include>
+    </c:if>
+
+
 
 </body>
 </html>

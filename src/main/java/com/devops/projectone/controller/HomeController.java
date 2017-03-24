@@ -55,14 +55,14 @@ public class HomeController {
 		return mv;
 	}
 	
-	@RequestMapping("/register")
+	/*@RequestMapping("/register")
 	public ModelAndView showRegistrationPage()
 	{
 		System.out.println("Clicked on Registraion link");
 		ModelAndView mv = new ModelAndView("/Menu/home");
 		mv.addObject("isUserClickedRegister","true");
 		return mv;
-	}
+	}*/
 	
 	
 	@RequestMapping("/validate")
@@ -132,7 +132,7 @@ public class HomeController {
 		return mv;
 	}
 	
-	@RequestMapping("/logout")
+/*@RequestMapping("/logout")
 	public ModelAndView logout()
 	{
 		ModelAndView mv =new ModelAndView("/Menu/home");
@@ -141,7 +141,7 @@ public class HomeController {
 		return mv;
 		
 	}
-	
+*/	
 	
 	
 	

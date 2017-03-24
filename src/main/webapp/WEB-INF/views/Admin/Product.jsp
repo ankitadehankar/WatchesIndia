@@ -39,7 +39,7 @@
   <tr>
    <td>${product.id}</td>
    <td>${product.name}</td>
-   <td>${product.description}</td>
+   <td>${product.price}</td>
    <td> <a href="/manage_product_edit">Edit</a> |  <a 
 
 href="/manage_product_delete"> Delete</a></td>

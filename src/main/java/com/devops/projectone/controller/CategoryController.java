@@ -26,7 +26,7 @@ public class CategoryController {
 		category.setName(name);
 		category.setDescription(description);
 		
-		ModelAndView mv = new ModelAndView("Redirect:/manage_category");
+		ModelAndView mv = new ModelAndView("Redirect:/manage_categories");
 		
 		if (categoryDAO.save(category)) {
 			mv.addObject("msg", "Successfully Created All Category");
